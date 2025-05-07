@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        a {
+    text-decoration: none;
+    color: #fff;
+   }
+   header {
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: auto;
+    height:auto ;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    background-color:#4b2e39 ;    
+    left: 0;
+    top: 0;
+   }
+    header.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    
+   }  
+   
+   header a {
+    padding: 6px 15px;
+    border-radius:20px ;
+   }
+        body
+{
+
+    background: linear-gradient(to right,#d1b3c4, #e8c2ca)
+    
+}  
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    
+
+.title
+{
+margin-top: 50px;    
+text-align: center;
+text-transform: capitalize;
+letter-spacing: 1 ;
+font-size: 60px ;
+height:80px;
+font-weight: bold;
+color: #735d78;
+font-family: "Playfair Display", serif;
+
+}
+.img1
+{   
+    width: 490px;
+    height: auto;
+    margin-left:90px;
+    
+    
+ }
+.img2
+{
+ width: auto;
+ height: 490px;
+ margin-left:190px;
+ 
+ 
+
+ 
+}
+.img3 
+{
+
+    width: 490px;
+    height: auto;
+ margin-left: 30%;
+ margin-right: 30%;
+ margin-top: 50px; }
+ .img1img2
+ {
+    display: flex;
+    
+ }
+ .description1 , .description2  {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    
+}
+.description1:hover, .description2:hover {
+    transform: scale(1.05);
+
+  }
+.description1:active , .description2:active
+{
+    transform: scale(0.95); 
+}
+
+.book1
+{
+margin-top:45px;
+margin-left:100px;
+font-family: "Playfair Display", serif;
+font-size:50px;
+color:#b392ac;
+  
+  
+  
+
+    
+  
+}
+.book2
+{
+margin-left:200px;
+font-family: "Playfair Display", serif;
+font-size:50px;
+color:#b392ac;
+}
+.book3
+{
+margin-left:480px;
+font-family: "Playfair Display", serif;
+font-size:50px;
+color:#b392ac;
+    
+}
+.description3
+{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.description3:hover
+{
+    transform: scale(1.05); 
+}
+.description3:active
+{
+    transform: scale(0.95); 
+}
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
+            
+           </header>
+        <h1 class="title">book categories</h1>
+        
+        <div class="img1img2">
+        <div class="description1">
+            <img class="img1" src="C:\Users\user\AppData\Local\Temp\Rar$DIa8752.18258\bec4b53d-370a-4b2c-b772-4e1be2755c7e.png"/>
+            <p class="book1">frontend book</p>
+        </div>
+        <div class="description2">
+            <img class="img2" src="C:\Users\user\AppData\Local\Temp\Rar$DIa8752.15548\ChatGPT Image Apr 29, 2025, 11_57_36 AM.png"/>
+            <p class="book2">backend book</p>
+        </div>
+    </div>
+    <div class="description3">
+        <img class="img3 "src="C:\Users\user\AppData\Local\Temp\Rar$DIa8752.6479\ChatGPT Image Apr 29, 2025, 12_00_21 PM.png"/>
+        <p class="book3">programming basics book</p>
+        
+    </body>
+    <script>
+        let frontend=document.querySelector(".img1");
+frontend.onclick=function()
+{
+    window.location.href ="";
+}
+let backend=document.querySelector(".img2");
+backend.onclick=function()
+{
+    window.location.href = "ITproject\store\back.html";
+}
+let programming=document.querySelector(".img3");
+programming.onclick=function()
+{
+    window.location.href = "ITproject\store\basics.html";
+}
+    </script>
+</html>

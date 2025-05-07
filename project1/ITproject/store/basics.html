@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+   
+    <style>
+        body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        .title
+{
+background-color:#d1b3c4 ;
+text-align: center;
+line-height: 80px; /*if it one line to make our books middle*/
+text-transform: capitalize;
+letter-spacing: 2px ;
+font-size: 50px ;
+font-style: oblique;
+color: #735c78;
+height: 80px;
+}
+.img3
+{
+width: 380px ;
+height:600px;
+margin: 50px ;
+border: 1px solid #d1b3c4;
+}
+.ti3
+{
+text-transform: capitalize;
+font-size: 50px;
+ margin-top: 50px  ;
+ margin-left:100px;
+ color: #735c78;
+ height:100px;
+
+}
+.container
+{
+    display:flex;
+}
+.info
+{
+    display:flex;
+    flex-direction:column;
+}
+.description3
+{ 
+ margin-top:50px ;
+ margin-left: 130px;
+ font-size:30px;
+ color: #d1b3c4;
+ line-height:160%;
+}
+.resources3
+{
+margin-left:410px;
+margin-top:10px;
+font-weight:bold;
+color:#b392ac;
+font-size:25px;
+line-height:180%;
+}
+.price3
+{
+    margin-left:800px;
+    font-weight: bold;
+    font-size:30px;
+    color: #735c78;
+}
+.buy3
+{
+font-size:16px;
+background-color: #b392ac;
+color: #f7d1cd;
+border:none;
+border-radius:8px;
+cursor: pointer;
+box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.1);
+height:50px;
+width:200px;
+transition: background-color 0.3s ease, transform 0.2s ease;
+text-transform: capitalize;
+margin-left:40px;
+}
+.buy3:hover
+{
+    
+    background-color:  #f7d1cd;
+    color:  #b392ac;
+ transform: scale(1.05);
+
+}
+.buydetails3
+{
+    display: flex;
+    margin-left: 650px;
+    margin-top:20px;
+
+}
+.num3
+{
+    border-radius: 8px;
+    border-color: #d1b3c4;
+    height:50px;
+    width:50px;
+    background-color: #b392ac;
+color: #f7d1cd;
+}
+.reset3
+{
+    border-radius: 8px;
+    border:none;
+    height:30px;
+    width:50px; 
+    background-color: #b392ac;
+color: #f7d1cd;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.reset3:hover
+{
+    transform: scale(1.05);
+    background-color:  #f7d1cd;
+    color:  #b392ac;
+
+}
+.bumoredetails3
+{
+    height:30px;
+    width:100px;
+    background-color: #b392ac;
+color: #f7d1cd;
+border:none;
+border-radius:8px;
+cursor: pointer;
+box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.1);
+}
+.moredetails3
+{
+    display: none;
+
+}
+
+
+        * {
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+
+
+</head>
+<body>
+    <h1 class="title">our books</h1>
+    <div class="container">
+    <img src="photo_2025-04-30_03-37-12.jpg" alt="Programming basics book image" class="img3" />
+    <div class="info">
+        <p class="ti3">programming basics book computer-science-academy</p>   
+
+
+    
+    <p class="description3">
+        This book introduces the essential building blocks of programming for those who are just starting their journey in the tech world.
+        Covering fundamental concepts such as variables, data types, control structures (if/else, loops), functions, and problem-solving logic
+        it provides a solid foundation for learning any programming language.
+        
+        The content is based on trusted and widely recognized educational resources<br> including:
+    </p>
+    
+    <ul class="resources3">
+        <li>freeCodeCamp <br></li>
+        <li>W3Schools <br></li>
+        <li>CS50 by Harvard University <br></li>
+    </ul>
+    <p class="price3">Price:<span>499.99</span> LE</p>
+    <button class="bumoredetails3">More Details</button>
+        <div class="moredetails3">
+            <p>Pages: 250</p>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+            <p>Published: 2024</p>
+            <p>Author: Salma Yousry</p>
+        </div>
+    <div class="buydetails3">
+    <form>
+        <input required type="number" max="100" min="1" class="num3">
+        <input type="reset" value="reset" class="reset3">
+        <input type="submit"  class="buy3" value="register and buy now!">
+    </form>
+    
+    </div>
+</div>
+    </div>
+<hr/>
+<script>
+    let btn=document.querySelector(".buy3");
+btn.onclick=function()
+{ event.preventDefault();
+    let price=+document.querySelector("span").textContent;
+    let qty=+document.querySelector(".num3").value;
+    let total=(price*qty);
+    if (qty <= 0 || isNaN(qty)) {
+        alert("Please enter a valid quantity (at least 1)");
+        return;
+    }
+    let confirmbuy=confirm(`Are you sure you want to buy ${qty} Books? 
+    Total price:${total}`);
+    if(confirmbuy)
+    {
+        window.location.href="";
+    }}
+    
+        
+
+    // };
+    let moredetails = document.querySelector(".bumoredetails3");
+    moredetails.onclick = function () {
+        let des = document.querySelector(".moredetails3");
+    
+        if (des.style.display === "block") {
+            des.style.display = "none";
+        } else {
+            des.style.display = "block";
+        }
+    };
+</script>
+</body>
+</html>
