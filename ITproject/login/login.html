@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+    <head>
+        <title>Login</title>
+        <style>
+            a {
+              text-decoration: none;
+              color: #FCFAEE;
+            }
+          
+            body {
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              background-color: #384B70;
+              color: #FCFAEE;
+            }
+          
+            header {
+              color: #FCFAEE;
+              text-align: center;
+              position: fixed;
+              width: auto;
+              height: auto;
+              border-radius: 50%;
+              z-index: 100;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 10px;
+              /* background-color: #507687; */
+              left: 0;
+              top: 0;
+            }
+          
+            header.logo {
+              font-size: 30px;
+              text-transform: uppercase;
+            }
+          
+            header a {
+              padding: 6px 15px;
+              border-radius: 20px;
+              color: #FCFAEE;
+            }
+          
+            .box {
+              width: 700px;
+              height: 800px;
+              background-color: #FCFAEE;
+              color: #384B70;
+              border-radius: 30px;
+              margin: 50px auto;
+              padding: 90px;
+              justify-content: center;
+              align-items: center;
+              display: flex;
+            }
+          
+            .form-container {
+              width: 100%;
+              margin: 0 auto;
+              display: flex;
+              padding: 70px;
+              flex-direction: column;
+              align-items: center;
+            }
+          
+            label {
+              font-size: 30px;
+              margin-bottom: 40px;
+              color: #384B70;
+            }
+          
+            input[type="submit"] {
+              font-size: 30px;
+              background-color: #B8001F;
+              color: #FCFAEE;
+              border: none;
+              padding: 10px 30px;
+              border-radius: 10px;
+              cursor: pointer;
+            }
+          
+            input[type="text"],
+            input[type="password"] {
+              width: 100%;
+              height: 50px;
+              border-radius: 30px;
+              font-size: large;
+              padding: 0 20px;
+              border: 2px solid #507687;
+              background-color: #fcfaee;
+              color: #384B70;
+            }
+          
+            img {
+              width: 300px;
+              height: 300px;
+              margin-bottom: 50px;
+              border-radius: 30px;
+            }
+          
+            button {
+              background-color: #B8001F;
+              color: #FCFAEE;
+              width: 30%;
+              height: 50px;
+              margin-top: 90px;
+              margin-left: 70%;
+              font-size: large;
+              cursor: pointer;
+              border: none;
+              border-radius: 10px;
+            }
+          
+            button:hover {
+              background-color: #507687;
+            }
+          
+            .welcome-text {
+              font-size: 50px;
+              color: #B8001F;
+            }
+          
+            #message {
+              margin-top: 10px;
+              text-align: center;
+              font-size: 50px;
+              color: #FCFAEE;
+            }
+          </style>
+                
+       
+    </head>
+
+    <body>
+        <header>
+            <h1><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
+            
+           </header>
+        
+        <div class="box">
+            <div class="form-container">
+
+                <img src="C:\Users\user\Downloads\WhatsApp_Image_2025-04-18_at_23.09.23-removebg-preview.png" alt="welcome to cs academy">
+                <form id="loginForm">
+                    <label for="username">Username</label><br>
+                    <input type="text" name="username" id="username" placeholder="please enter your name" required size="90"><br>
+                    <label for="password">Password</label><br>
+                    
+                    <input type="password" name="password"id="password" placeholder="please enter your password"required size="90"><br> 
+                    
+                    <button onclick="navigateToHome()" type="submit">Login</button>
+                </form>
+                <p class="welcome-text">welcome to our academy </p>
+                
+            </div>
+            
+        </div>
+        <p id="message"></p>
+        <script>
+            function navigateToHome(page) {
+                    window.location.href = 'ITproject\home\home.html';
+                    }
+            const valid_username="user1234";
+            const valid_password="1234";
+            document.getElementById("loginForm").addEventListener("submit",function(event){
+                event.preventDefault();
+                const username=document.getElementById("username").value;
+                const password=document.getElementById("password").value;
+                const message=document.getElementById("message");
+                if(username===valid_username&&password===valid_password){
+                    message.textContent="login successful😊";
+                    message.style.color="violet";
+                    
+                }
+                else{
+                    message.textContent="Invalid username or password";
+                    message.style.color="red";
+                }
+            });
+             
+
+
+        </script>
+    </body>
+</html>

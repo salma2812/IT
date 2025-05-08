@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources</title>
+</head>
+<body>
+  <header>
+    <h1><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
+  </header>
+
+  <!-- <div class="header">
+    <p>
+      At <button onclick="ApearLinks()">CS Academy</button>
+      , you will find trust and safety at every step.  
+      We believe that knowledge grows through sharing, which is why we share with you some of the resources that helped us build our content and will also assist you on your journey of research and learning.  
+      <strong>Our highest goal is to give you the best… so we can bring out the best in you.</strong>
+    </p>
+  </div> -->
+  
+  <div class="container">
+    <div class="square1">
+      <h2>Electronic Books (Pdfs / E-Books)</h2>
+      <ul>
+        <li><a href="https://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a></li>
+        <li><a href="https://www.theselftaughtprogrammer.io/" target="_blank">The Self-Taught Programmer</a></li>
+        <li><a href="https://greenteapress.com/wp/think-python-2e/" target="_blank">Think Python</a></li>
+        <li><a href="https://wtf.tw/ref/duckett.pdf" target="_blank">Design and Build Websites</a></li>
+        <li><a href="https://karadev.net/uroci/filespdf/files/a%20book%20on%20c.pdf" target="_blank">Programming for the Absolute Beginner</a></li>
+      </ul>
+    </div>
+
+    <div class="square2">
+      <h2>Developer Tools</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+        <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+      </ul>
+    </div>
+
+    <div class="square3">
+      <h2>Interactive Learning Platforms</h2>
+      <ul>
+        <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+        <li><a href="https://www.hackerrank.com/" target="_blank">HackerRank</a></li>
+        <li><a href="https://www.sololearn.com/" target="_blank">SoloLearn</a></li>
+        <li><a href="https://leetcode.com/" target="_blank">LeetCode</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <h3>All rights reserved 2025</h3>
+  </footer>
+
+  <style>
+    a {
+  text-decoration: none;
+  color: #FCFAEE;
+}
+
+header {
+  color: #FCFAEE;
+  text-align: center;
+  position: fixed;
+  width: auto;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  background-color: #FCFAEE;
+  left: 0;
+  top: 0;
+}
+
+header.logo {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+header a {
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #384B70;
+}
+
+.header {
+  margin-top: 30px;
+  background-color: #507687;
+  color: #FCFAEE;
+  text-align: left;
+  padding: 10px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.box h1 {
+  font-size: 40px;
+  margin: 0;
+  color: #FCFAEE;
+}
+
+.header button {
+  color: #FCFAEE;
+  font-size: x-large;
+  border-color: #507687;
+  box-shadow: 3px 3px 10px rgba(116, 38, 68, 0.5);
+}
+
+.header p {
+  font-size: larger;
+  color: #721237;
+}
+
+.header strong {
+  color: rgb(47, 47, 53);
+}
+
+.container {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+}
+
+.square1, .square2, .square3 {
+  background-color: #FCFAEE; /* اللون الفاتح جدًا من الباليت الجديدة */
+  padding: 20px;
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+h2 {
+  color: #333;
+}
+
+a {
+  display: block;
+  margin: 20px 0;
+  color: #B8001F; /* اللون الأحمر الداكن من الباليت الجديدة */
+  text-decoration: none;
+  font-size: large;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #507687;
+  color: #FCFAEE;
+  text-align: center;
+  padding: 10px;
+  margin-top: 100px;
+}
+</style>
+
+  <script>
+    function ApearLinks() {
+      const links = document.getElementsByTagName("a");
+      alert("You can read all the books,\nuse all the tools, and access the following platforms completely for free.\n\nNumber of links: " + links.length);
+    }
+  </script>
+</body>
+</html>

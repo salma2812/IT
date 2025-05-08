@@ -1,0 +1,99 @@
+a {
+  text-decoration: none;
+  color: #FCFAEE; /* بيج فاتح */
+}
+
+header {
+  color: #FCFAEE; /* بيج فاتح */
+  text-align: center;
+  position: fixed;
+  width: auto;
+  height: auto;
+  /* border-radius: 50%; */
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  /* background-color: #384B70; أزرق داكن */
+  left: 0;
+  top: 0;
+}
+
+header.logo {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+header a {
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+body {
+  margin-top: 0px;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background-color: #FCFAEE; /* بيج فاتح */
+  padding: 20px;
+  color: #384B70; /* نص أزرق داكن */
+}
+
+.center-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #507687; /* أزرق رمادي */
+  display: none;
+}
+
+th {
+  padding: 12px;
+  text-align: center;
+  background-color: #384B70; /* رأس الجدول */
+  color: #FCFAEE;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+  color: #384B70; /* نص أزرق داكن */
+}
+
+tr:nth-child(even) {
+  background-color: #FCFAEE; /* خلفية صف زوجي */
+}
+
+tr:nth-child(odd) {
+  background-color: #F0F0E6; /* درجة قريبة للبيج الفاتح */
+}
+
+table, th, td {
+  border: 1px solid #507687; /* أزرق رمادي */
+}
+
+a {
+  color: #B8001F; /* أحمر */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C56B00; /* برتقالي أغمق */
+  text-decoration: underline;
+}
+
+table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h2 {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+h2:hover {
+  transform: translateY(-10px);
+  color: #B8001F; /* أحمر عند التحويم */
+}
+
+  

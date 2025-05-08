@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الكتب</title>
+    <style>
+        /* استايل الجسم */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #A1C6E7, #F4F1C9);
+            font-size: 30px; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+    
+        /* استايل الحاويات الخارجية */
+        .book-container {
+            display: flex;
+            gap: 150px; /* تم تقليل المسافة بين العناصر */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+    
+        .book-container div {
+            background-color: #384B70; /* لون خلفية الكتب */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+    
+        .book-container div:hover {
+            transform: scale(1.05);
+        }
+    
+        .book-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    
+        .book-container p {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #F0CFAE; /* اللون الكريمي للنص */
+        }
+    
+        /* استايل العناوين */
+        .book1, .book2, .book3 {
+            color: #EB8001; /* لون النص */
+        }
+    
+        /* استايل زر "add to cart" */
+        .add-to-cart {
+            background-color: #F0CFAE; /* لون الزر */
+            color: #384B70; /* لون النص في الزر */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+    
+        .add-to-cart:hover {
+            background-color: #507687; /* تغيير اللون عند المرور */
+        }
+    
+        /* استايل السعر */
+        .price {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #384B70;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="book-container">
+        <div class="frontbook">
+            <img class="img1" src="C:/Users/user/OneDrive/Pictures/Saved Pictures/fbook.jpg" alt="Frontend Book"/>
+            <p class="book1">Frontend Book</p>
+            <p class="price">500 LE</p>
+            <button class="add-to-cart">add to cart</button>
+        </div>
+
+        <div class="backbook">
+            <img class="img2" src="C:/Users/user/OneDrive/Pictures/Saved Pictures/bbook.jpg" alt="Backend Book"/>
+            <p class="book2">Backend Book</p>
+            <p class="price">500LE</p>
+            <button class="add-to-cart">add to cart</button>
+        </div>
+
+        <div class="pbbook">
+            <img class="img3" src="C:/Users/user/OneDrive/Pictures/Saved Pictures/pbbook.jpg" alt="Programming Basics Book"/>
+            <p class="book3">Programming Basics Book</p>
+            <p class="price">500LE</p>
+            <button class="add-to-cart">add to cart</button>
+        </div>
+    </div>
+
+</body>
+</html>

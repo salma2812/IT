@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        
+        <style>
+            body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.title
+{
+background-color:#d1b3c4 ;
+text-align: center;
+line-height: 80px; /*if it one line to make our books middle*/
+text-transform: capitalize;
+letter-spacing: 2px ;
+font-size: 50px ;
+font-style: oblique;
+color: #735c78;
+height: 80px;
+}
+.ti2
+{
+text-transform: capitalize;
+font-size: 50px;
+ margin-top: 50px  ;
+ margin-left: 100px;
+ color: #735c78;
+ height:100px;
+
+}
+.img2
+{
+width: 380px ;
+height:600px;
+margin: 50px ;
+border: 1px solid #d1b3c4;
+}
+.container
+{
+    display:flex;
+}
+.info
+{
+    display:flex;
+
+    flex-direction:column;
+}
+.description2
+{   
+ margin-left: 130px;
+ font-size:30px;
+ color: #d1b3c4;
+ line-height:160%;
+}
+.resources2
+{
+margin-left:410px;
+margin-top:30px;
+font-weight:bold;
+color:#b392ac;
+font-size:25px;
+line-height:180%;}
+.price2
+{
+    margin-left:800px;
+    font-weight: bold;
+    font-size:30px;
+    color: #735c78;
+}
+.buy2
+{
+font-size:16px;
+background-color: #b392ac;
+color: #f7d1cd;
+border:none;
+border-radius:8px;
+cursor: pointer;
+box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.1);
+height:50px;
+width:200px;
+transition: background-color 0.3s ease, transform 0.2s ease;
+text-transform: capitalize;
+margin-left:40px;
+}
+.buy2:hover
+{
+    
+    background-color:  #f7d1cd;
+    color:  #b392ac;
+ transform: scale(1.05);
+
+}
+.buydetails2
+{
+    display: flex;
+    margin-left: 650px;
+    margin-top:20px;
+
+}
+.num2
+{
+    border-radius: 8px;
+    border-color: #d1b3c4;
+    height:50px;
+    width:50px;
+    background-color: #b392ac;
+color: #f7d1cd;
+}
+.reset2
+{
+    border-radius: 8px;
+    border:none;
+    height:30px;
+    width:50px; 
+    background-color: #b392ac;
+color: #f7d1cd;
+transition: background-color 0.3s ease, transform 0.2s ease;
+margin-left: 3px;
+}
+.reset2:hover
+{
+    transform: scale(1.05);
+    background-color:  #f7d1cd;
+    color:  #b392ac;
+
+}
+.bumoredetails2
+{
+    height:30px;
+    width:100px;
+    background-color: #b392ac;
+color: #f7d1cd;
+border:none;
+border-radius:8px;
+cursor: pointer;
+box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.1);
+}
+.moredetails2
+{
+    display: none;
+
+}
+
+            * {
+              margin: 0;
+              padding: 0;
+            }
+          </style>
+
+    </head>
+
+    
+    
+    
+    <body>
+        
+        <h1 class="title">Our Books</h1>
+    <div class="container">
+    
+        
+        
+        <img  class="img2"src="photo_2025-04-30_03-37-36.jpg" alt="Back end book image" />
+        <div class="info">
+        <p class="ti2">backend book computer-science-academy</p>
+        
+        
+        <p class="description2">
+            This book offers a structured and beginner-friendly approach to learning back-end development,
+            focusing on the core technologies and principles behind building and managing server-side applications.
+            It introduces key topics such as databases, server logic, APIs, and interaction with front-end interfaces.
+            
+            The content has been developed based on well-established and trusted resources in the programming world,<br>
+            including:
+        </p>
+        
+        <ul class="resources2">
+            <li>MDN Web Docs</li>
+            <li>freeCodeCamp</li>
+            <li>The Odin Project</li>
+            
+        </ul>
+        <p class="price2">Price:<span>499.99</span> LE</p>
+        <button class="bumoredetails2">More Details</button>
+        <div class="moredetails2">
+            <p>Pages: 250</p>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+            <p>Published: 2024</p>
+            <p>Author: Salma Yousry</p>
+        </div>
+
+
+
+            
+        <div class="buydetails2">
+        <form>
+            <input required type="number" max="100" min="1" class="num2">
+            <input type="reset" value="reset" class="reset2">
+            <input type="submit"  class="buy2" value="register and buy now!">
+        </form>
+    
+        </div>
+        </div>
+    </div>
+        
+    <hr/>
+    <script>
+        let btn=document.querySelector(".buy2");
+btn.onclick=function()
+{ event.preventDefault();
+    let price=+document.querySelector("span").textContent;
+    let qty=+document.querySelector(".num2").value;
+    let total=(price*qty);
+    if (qty <= 0 || isNaN(qty)) {
+        alert("Please enter a valid quantity (at least 1)");
+        return;
+    }
+    let confirmbuy=confirm(`Are you sure you want to buy ${qty} Books? 
+    Total price:${total}`);
+    if(confirmbuy)
+    {
+        window.location.href="";
+    }}
+    
+        
+
+    // };
+    let moredetails = document.querySelector(".bumoredetails2");
+    moredetails.onclick = function () {
+        let des = document.querySelector(".moredetails2");
+    
+        if (des.style.display === "block") {
+            des.style.display = "none";
+        } else {
+            des.style.display = "block";
+        }
+    };
+    </script>
+    </body>
+    </html>

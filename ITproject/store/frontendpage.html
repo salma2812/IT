@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    
+    <style>
+ body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}       
+        .title
+{
+background-color:#d1b3c4 ;
+text-align: center;
+line-height: 80px; /*if it one line to make our books middle*/
+text-transform: capitalize;
+letter-spacing: 2px ;
+font-size: 50px ;
+font-style: oblique;
+color: #735c78;
+height: 80px;
+}
+.img1
+{
+width: 380px ;
+height:600px;
+margin: 50px ;
+border: 1px solid #d1b3c4;
+}
+.ti1
+{
+text-transform: capitalize;
+font-size: 50px;
+ margin-top: 50px  ;
+ margin-left: 100px;
+ color: #735c78;
+ height:100px;
+
+}
+.container
+{
+    display:flex;
+}
+.info
+{
+    display:flex;
+
+    flex-direction:column;
+}
+.description1 
+{   
+ margin-left: 130px;
+ font-size:30px;
+ color: #d1b3c4;
+ line-height:160%;
+}
+.resources1
+{
+margin-left:410px;
+margin-top:30px;
+font-weight:bold;
+color:#b392ac;
+font-size:25px;
+line-height:180%;
+}
+.price1
+{
+    margin-left:800px;
+    font-weight: bold;
+    font-size:30px;
+    color: #735c78;
+}
+
+.buy1
+{
+font-size:16px;
+background-color: #b392ac;
+color: #f7d1cd;
+border:none;
+border-radius:8px;
+cursor: pointer;
+box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.1);
+height:50px;
+width:200px;
+transition: background-color 0.3s ease, transform 0.2s ease;
+text-transform: capitalize;
+margin-left:40px;
+}
+.buy1:hover
+{
+    
+    background-color:  #f7d1cd;
+    color:  #b392ac;
+ transform: scale(1.05);
+
+}
+.buydetails1
+{
+    display: flex;
+    margin-left: 650px;
+    margin-top:20px;
+
+}
+.num1
+{
+    border-radius: 8px;
+    border-color: #d1b3c4;
+    height:50px;
+    width:50px;
+    background-color: #b392ac;
+color: #f7d1cd;
+}
+.reset1
+{
+    border-radius: 8px;
+    border:none;
+    height:30px;
+    width:50px; 
+    background-color: #b392ac;
+color: #f7d1cd;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.reset1:hover
+{
+    transform: scale(1.05);
+    background-color:  #f7d1cd;
+    color:  #b392ac;
+
+}
+.bumoredetails
+{
+    height:30px;
+    width:100px;
+    background-color: #b392ac;
+color: #f7d1cd;
+border:none;
+border-radius:8px;
+cursor: pointer;
+box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.1);
+}
+.moredetails
+{
+    display: none;
+
+}
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <title>Our Books</title>
+</head>
+
+<body>
+
+    <h1 class="title">our books</h1>
+    <div class="container">
+
+
+
+
+
+        <img class="img1" src="photo_2025-04-21_03-39-27.jpg" alt="Front end book image" />
+
+        <div class="info">
+            <p class="ti1">Frontend book computer-science-academy</p>
+
+
+            <p class="description1">
+                This book serves as a structured guide to learning the fundamentals of front-end development,
+                covering the core concepts of HTML, CSS, and JavaScript in a clear and accessible manner.
+                The content has been carefully curated based on trusted and reputable sources in the web development
+                community
+                including:<br>
+            </p>
+
+            <ul class="resources1">
+                <li>MDN Web Docs <br></li>
+                <li>W3Schools <br></li>
+                <li>freeCodeCamp <br></li>
+            </ul>
+            <p class="price1">Price:<span>499.99</span> LE</p>
+            <button class="bumoredetails">More Details</button>
+            <div class="moredetails">
+            <p>Pages: 250</p>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+            <p>Published: 2024</p>
+            <p>Author: Salma Yousry</p>
+            </div>
+            <div class="buydetails1">
+                <form >
+                    <input required type="number" max="100" min="1" class="num1" >
+                    <input type="reset" value="Reset" class="reset1">
+                    <input type="submit"  class="buy1" value="register and buy now!">
+                </form>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <hr />
+
+
+
+<script>
+    let btn=document.querySelector(".buy1");
+btn.onclick=function()
+{ event.preventDefault();
+    let price=+document.querySelector("span").textContent;
+    let qty=+document.querySelector(".num1").value;
+    let total=(price*qty);
+    if (qty <= 0 || isNaN(qty)) {
+        alert("Please enter a valid quantity (at least 1)");
+        return;
+    }
+    let confirmbuy=confirm(`Are you sure you want to buy ${qty} Books? 
+    Total price:${total}`);
+    if(confirmbuy)
+    {
+        window.location.href="";
+    }}
+    
+        
+
+    // };
+    let moredetails = document.querySelector(".bumoredetails");
+    moredetails.onclick = function () {
+        let des = document.querySelector(".moredetails");
+    
+        if (des.style.display === "block") {
+            des.style.display = "none";
+        } else {
+            des.style.display = "block";
+        }
+    };
+</script>
+</body>
+
+</html>
