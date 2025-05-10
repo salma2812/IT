@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="eng">
+<html lang="en">
     <head>
         <title>Login</title>
         <style>
@@ -44,13 +44,13 @@
             }
           
             .box {
-              width: 700px;
-              height: 800px;
+              width: 600px;
+              height: 700px;
               background-color: #FCFAEE;
               color: #384B70;
               border-radius: 30px;
               margin: 50px auto;
-              padding: 90px;
+              padding: 50px;
               justify-content: center;
               align-items: center;
               display: flex;
@@ -93,13 +93,7 @@
               color: #384B70;
             }
           
-            img {
-              width: 300px;
-              height: 300px;
-              margin-bottom: 50px;
-              border-radius: 30px;
-            }
-          
+            
             button {
               background-color: #B8001F;
               color: #FCFAEE;
@@ -111,22 +105,27 @@
               cursor: pointer;
               border: none;
               border-radius: 10px;
+              margin-bottom: 90px;
             }
           
             button:hover {
               background-color: #507687;
             }
           
-            .welcome-text {
-              font-size: 50px;
-              color: #B8001F;
-            }
+            
           
             #message {
               margin-top: 10px;
               text-align: center;
               font-size: 50px;
               color: #FCFAEE;
+            }
+            img{ 
+              width:100%;
+              height:300px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              
             }
           </style>
                 
@@ -135,14 +134,14 @@
 
     <body>
         <header>
-            <h1><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
+            <h1><a href="C:/Users/user/OneDrive/Desktop/it projrct/html/project1/ITproject/home/home.html" class="logo"> C S A </a></h1>    
             
            </header>
         
         <div class="box">
             <div class="form-container">
+                <img src="C:/Users/user/Downloads/WhatsApp_Image_2025-05-09_at_19.18.11-removebg-preview.png">
 
-                <img src="C:\Users\user\Downloads\WhatsApp_Image_2025-04-18_at_23.09.23-removebg-preview.png" alt="welcome to cs academy">
                 <form id="loginForm">
                     <label for="username">Username</label><br>
                     <input type="text" name="username" id="username" placeholder="please enter your name" required size="90"><br>
@@ -152,16 +151,14 @@
                     
                     <button onclick="navigateToHome()" type="submit">Login</button>
                 </form>
-                <p class="welcome-text">welcome to our academy </p>
+                
                 
             </div>
             
         </div>
         <p id="message"></p>
         <script>
-            function navigateToHome(page) {
-                    window.location.href = 'ITproject\home\home.html';
-                    }
+            
             const valid_username="user1234";
             const valid_password="1234";
             document.getElementById("loginForm").addEventListener("submit",function(event){
@@ -170,8 +167,7 @@
                 const password=document.getElementById("password").value;
                 const message=document.getElementById("message");
                 if(username===valid_username&&password===valid_password){
-                    message.textContent="login successful😊";
-                    message.style.color="violet";
+                    window.location.href="C:/Users/user/OneDrive/Desktop/it projrct/html/project1/ITproject/home/home.html";
                     
                 }
                 else{

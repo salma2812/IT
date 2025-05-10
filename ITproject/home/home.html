@@ -1,39 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8" />   
+    
     <title>CSA</title>
-    <link rel="stylesheet" href="home.css">
+    <style>
+      .card{
+        width: 300px;
+        height: 200px;
+      }
+      .card img {
+  width: 100%;
+  height: calc(100% - 40px);
+  object-fit: cover;
+}
+      body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER  */
+.headerContainer {
+    background-color: #384B70;
+}
+.header {
+    /* position: sticky; */
+    /* top: 0; */
+    height: 80px;
+    background-color: #384B70;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px 0 100px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.headerLinks {
+    width: 50%;
+}
+
+.headerLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.headerLinks a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.headerLinks a:hover {
+    background-color: #B8001F;
+    
+}
+
+
+/* END HEADER  */
+
+/* LANDING PAGE  */
+.landingPageContainer {
+    background-color: #384B70;
+    border-radius: 0 0 100px 100px;
+}
+.landingPage {
+    display: flex;
+    background-color: #384B70;
+    color: #fff;
+    padding: 100px 0;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.landingPage .slogan {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.landingPage .welcome {
+    font-size: x-large;
+    height: 10px;
+}
+
+.landingPage .description {
+    color: #000;
+    width: 80%;
+    font-weight: 500;
+    
+}
+
+.searchBar {
+    position: relative;
+    margin-top: 100px;
+}
+
+.searchBar input {
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    width: 40%;
+    height: 50px;
+    font-size: large;
+    padding-left: 20px;
+}
+
+.searchBar input::placeholder {
+    font-size:medium;
+}
+
+.btn {
+    border-radius: 50px;
+    height: 52px;
+    border: none;
+    font-weight:600;
+    font-size: medium;
+    padding: 0 20px;
+    background-color: #B8001F;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: #9E4147;
+    cursor: pointer;
+}
+
+.searchBar .searchBtn {
+    position: absolute;
+    left: 300px;
+}
+
+.leftSide {
+    padding-top: 30px;
+    flex: 8;
+}
+
+.imageContainer {
+    flex: 4;
+}
+
+.imageContainer img {
+    width: 100%;
+    border-radius: 20px;
+}
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* END LANDING PAGE  */
+
+/* TRENDING  */
+.trendingContainer {
+    margin:auto ;
+    max-width: 1300px;
+    margin-top: 100px;
+}
+
+.trendingHeader, .mostHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    padding-bottom: 40px;
+    
+}
+
+.trendingHeader h1, .mostHeader h1, .categoryHeader h1 {
+    margin-top: 0;
+}
+
+.trendingContainer span, .mostContainer span, .categoryHeader span {
+    text-transform: uppercase;
+    color: #B8001F;
+    font-weight: 600;
+}
+
+.trendingCard, .mostCards, .categoryCards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trendingCard .card {
+    position: relative;
+}
+
+
+.trendingCard .card img {
+    border-radius: 20px;
+}
+
+.trendingCard .card .cardInfo {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    background-color: #EEEEEE;
+    border-radius: 0 0 20px 20px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trendingCard .card .cardName {
+    padding: 0 20px;
+}
+
+.trendingCard .cardName h3 {
+    margin-top: 0;
+}
+
+.trendingCard .cardName p {
+    color: gray;
+    margin-bottom: 0;
+}
+
+
+.trendingCard .cardInfo .icon img {
+    width: 50px;
+    transition: .3s;
+}
+
+.trendingCard .cardInfo .icon {
+    margin-right: 20px;
+}
+
+.trendingCard .cardInfo img:hover{
+    transform: scale(1.3);
+}
+
+/* END TRENDING  */
+
+
+.cardImg img {
+    border-radius: 20px;
+}
+
+/* CATEGORY  */
+.categoryContainer {
+    margin-top: 150px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.category .categoryHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category .card .cardImg{
+    position: relative;
+    top: -20px;
+}
+.category .card .genre {
+    background-color: #384B70;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0 30px 0;
+    font-size: large;
+    font-weight: 500;
+    border-radius: 20px 20px 0 0;
+}
+
+.category .categoryCards {
+    margin-top: 30px;
+}
+.card {
+    transition: .3s;
+}
+
+.category .card:hover {
+    transform: scale(1.05);
+}
+
+
+/* END CATEGORY  */
+
+/* FOOTER  */
+.footerContainer {
+    background-color: #384B70;
+    height: 150px;
+    border-radius: 100px 100px 0 0;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: larger;
+}
+
+/* END FOOTER  */
+    </style>
   </head>
   <body>
-    <nav>
-   <header>
-    <h1><a href="#" class="logo"> C S A </a></h1>    
-    <ul>
-      <li><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="active"> Home </a></li>
-      <li><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\contact_us\contact_us.html" class="active"> Contact us </a></li>
-      <li> <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\about_us\about_us.html" class="active"> About us </a></li>
-      <li> <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\resources\resources.html" class="active"> Resources </a></li>
-      <li><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\store\altstore.html "class="active"> Store </a></li>
-      <li> <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\centers\centers.html"class="active"> Centers </a></li> 
-      <li><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\categories\categories.html" class="active"> Categories </a></li>
-      <li> <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\login\login.html" class="active"> Login </a></li>
-    </ul>
-   </header>
-  </nav>
-   <section class="main">
-    <!-- <img src="C:\Users\user\Downloads\WhatsApp_Image_2025-04-18_at_23.09.23-removebg-preview.png" id="star">   -->
-    <!-- <img src="c:\Users\I-SEVEN\Downloads\mountains3.webp" id="mount3">          
-    <img src="c:\Users\I-SEVEN\Downloads\mountains4.webp" id="mount4">
-    <img src="c:\Users\I-SEVEN\Downloads\river5.webp" id="river">
-    <img src="c:\Users\I-SEVEN\Downloads\mountains7.webp" id="mount7">     -->
-   </section>
-   <div class="content">
-    <h2>CSacademy</h2>
-    <p> the best learning site you have ever seen. fun,fast,and beginner-firendly. build apps wesites & more </p>    
-    <p>no experience needed. start your coding gourney today!</p>
-   </div>
-   <script src="home.js"></script>
+    <!-- HEADER -->
+    <div class="headerContainer">
+      <div class="header">
+        <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="logo">
+          <h1>CSA</h1>
+        </a>
+        <div class="headerLinks">
+          <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html">Home</a>
+          <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\store\altstore.html">store</a>
+          <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\resources\resources.html">resources</a>
+          <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\categories\categories.html">categories</a>
+          <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\centers\centers.html">Centers</a>
+          <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\about_us\about_us.html">About</a>
+          <a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\contact_us\contact_us.html">Contact</a>
+          <button class="btn"><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\login\login.html">login</a></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LANDING PAGE -->
+    <div class="landingPageContainer">
+      <div class="landingPage">
+        <!-- LEFT SIDE -->
+        <div class="leftSide">
+          <p class="welcome">Welcome to CSA</p>
+          <h1 class="slogan">best learning site ever!</h1>
+          <p class="description">
+            the best learning site you have ever seen .fun,fast,and beginner-firendly.build apps wesites & more    
+            no experience needed . start your coding gourney today!
+          </p>
+          <div class="searchBar">
+            <input type="text" placeholder="Type Something" />
+            <button class="btn searchBtn">SEARCH NOW</button>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE  -->
+        <div class="imageContainer">
+          <img src="c:\Users\I-SEVEN\Downloads\istockphoto-1371339413-612x612.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- TRENDING  SECTION  -->
+    <div class="trendingContainer">      
+      <div class="trendingHeader">
+        <h1>Advantages</h1>
+        
+      </div>
+      <div class="trendingCard">
+        <!-- TRENDING 1 -->
+        <div class="card">
+          <img src="C:\Users\user\Downloads\env.jpeg" alt="" />
+          <div class="cardInfo">
+            <div class="cardName">
+              
+              <h3>healthy enviroment</h3>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- TRENDING 2 -->
+        <div class="card">
+          <img src="C:\Users\user\Downloads\WhatsApp Image 2025-05-10 at 18.14.51.jpeg" alt="" />
+          <div class="cardInfo">
+            <div class="cardName">
+              
+              <h3>Speed</h3>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- TRENDING 3 -->
+        <div class="card">
+          <img src="C:\Users\user\Downloads\proff.jpeg" alt="" />
+          <div class="cardInfo">
+            <div class="cardName">
+              
+              <h3>proffisionality</h3>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- TRENDING  4 -->
+        <div class="card">
+          <img src="C:\Users\user\Downloads\eff.jpeg" alt="" />
+          <div class="cardInfo">
+            <div class="cardName">
+              
+              <h3>efficiency</h3>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- TOP CATEGORIES  -->
+    <div class="categoryContainer">
+      <div class="category">
+        <div class="categoryHeader">         
+          <h1>Top pathes</h1>
+        </div>
+        <div class="categoryCards">
+          <!-- CARD 1  -->
+          <div class="card">
+            <div class="genre">programming basics</div>
+            <div class="cardImg">
+              <img src="C:\Users\user\Downloads\prbasics.jpg"  alt="" style="height: 190px; width: 300;"/>
+            </div>
+          </div>
+         
+          <!-- CARD 3 -->
+          <div class="card">
+            <div class="genre">back end</div>
+            <div class="cardImg">
+              <img src="C:\Users\user\Downloads\OIP.jpg" alt="" style="height: 190px; width: 300;"/>
+            </div>
+          </div>
+              
+              <!-- CARD 5   -->
+              <div class="card">
+                <div class="genre">front end</div>
+                <div class="cardImg">
+                  <img src="C:\Users\user\Downloads\front.jpeg" alt="" style="height: 190px; width: 300;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- FOOTER  -->
+    <div class="footerContainer">
+      <div class="footer">
+        copyright &copy; 2025 CSA learning website. All rights reserved. Design:
+        Team
+      </div>
+    </div>
   </body>
-</section>
 </html>

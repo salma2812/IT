@@ -35,51 +35,63 @@
   </style>
 </head>
 <body>
+  <div class="sky" id="sky"></div>
   <header>
     <h1><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
-    
-   </header>
-     <div class="contact-container">
+  </header>
+
+  <div class="contact-container">
     <form action="#" id="contactForm">
       <div class="contact-left">
         <div class="title">
           <h2>contact us</h2>
-          <!-- <hr> -->
         </div>
         <input type="text" name="name" placeholder="your full name" class="contact-inputs" required>
         <input type="text" name="email" placeholder="your email" class="contact-inputs" required>
         <textarea name="message" id="message" placeholder="your message" class=" contact-inputs-text" required></textarea>
-        <button type="submit" class="contact-inputs-button">submit</button>
+        <button type="submit" class="contact-inputs-button" id="submitBtn">submit</button>
 
         <div id="successMessage" class="success-message">Your message has been sent successfully! Thank you for contacting us 😊</div>
       </div>
     </form>
-    <div class="right image">
-      <img src="C:\Users\user\Downloads\WhatsApp_Image_2025-04-18_at_23.26.36-removebg-preview.png" alt="image" srcset="">
+    <div class="right-image">
+      <img src="C:\Users\user\Downloads\right.png" alt="image" srcset="">
     </div>
   </div>
+
   <a href="https://www.facebook.com/profile.php?id=61575088424020" class="facebook-link" target="_blank">
-    <img src="facebook.png" alt="Facebook" width="20" style="margin-left: 8px;">
+    <img src="C:\Users\user\Downloads\fb.png" alt="Facebook" width="20" style="margin-left: 8px;">
     OUR FACEBOOK PAGE
   </a>
 
-
   <script>
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-      var messageDiv = document.getElementById("successMessage");
+        var messageDiv = document.getElementById("successMessage");
 
-      messageDiv.style.display = "block";
-      messageDiv.style.animation = "none";
-      void messageDiv.offsetWidth;
-      messageDiv.style.animation = "fadeInPulse 0.6s ease-in-out";
+        messageDiv.style.display = "block";
+        messageDiv.style.animation = "none";
+        void messageDiv.offsetWidth;
+        messageDiv.style.animation = "fadeInPulse 0.6s ease-in-out";
 
-      document.getElementById("contactForm").reset();
+        document.getElementById("contactForm").reset();
 
-      setTimeout(function () {
-        messageDiv.style.display = "none";
-      }, 4000);
+        setTimeout(function () {
+          messageDiv.style.display = "none";
+        }, 4000);
+      });
+
+      const sky = document.getElementById('sky');
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.top = Math.random() * window.innerHeight + 'px';
+        star.style.left = Math.random() * window.innerWidth + 'px';
+        star.style.animationDuration = (Math.random() * 2 + 1) + 's, ' + (Math.random() * 12 + 6) + 's';
+        sky.appendChild(star);
+      }
     });
   </script>
 </body>

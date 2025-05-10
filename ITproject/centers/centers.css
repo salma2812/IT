@@ -1,7 +1,4 @@
-a {
-  text-decoration: none;
-  color: #FCFAEE; /* بيج فاتح */
-}
+
 
 header {
   color: #FCFAEE; /* بيج فاتح */
@@ -56,29 +53,29 @@ th {
 td {
   padding: 12px;
   text-align: center;
-  color: #384B70; /* نص أزرق داكن */
+  color: #384B70;
 }
 
 tr:nth-child(even) {
-  background-color: #FCFAEE; /* خلفية صف زوجي */
+  background-color: #FCFAEE; 
 }
 
 tr:nth-child(odd) {
-  background-color: #F0F0E6; /* درجة قريبة للبيج الفاتح */
+  background-color: #F0F0E6; 
 }
 
 table, th, td {
-  border: 1px solid #507687; /* أزرق رمادي */
+  border: 1px solid #507687; 
 }
 
 a {
-  color: #B8001F; /* أحمر */
+  color: #B8001F; 
   text-decoration: none;
 }
 
 a:hover {
-  color: #C56B00; /* برتقالي أغمق */
-  text-decoration: underline;
+  color: #507687; 
+  
 }
 
 table {

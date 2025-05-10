@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0; 
 }
+h1 a{
+ 
+  text-decoration: none;
+  color: #fcfaee;
+  background-color: #384b70;
+}
+
 body {
   background: linear-gradient(#384b70, #507687);
   height: 100vh;
@@ -41,7 +48,7 @@ header ul li a {
   padding: 6px 15px;
   border-radius: 20px;
 }
-nav header ul li a:hover,
+header ul li a:hover,
 .active {
   background-color: #fcfaee;
   color: #b8001f;
