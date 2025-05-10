@@ -1,114 +1,199 @@
 <!DOCTYPE html>
-<html lang="ar">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة الكتب</title>
+
+    <title>Book Store</title>
     <style>
-        /* استايل الجسم */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #A1C6E7, #F4F1C9);
-            font-size: 30px; 
-            padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: 200px;
+
         }
-    
-        /* استايل الحاويات الخارجية */
-        .book-container {
-            display: flex;
-            gap: 150px; /* تم تقليل المسافة بين العناصر */
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 20px;
+
+        img {
+            height: 300px;
+            width: auto;
+
+
         }
-    
-        .book-container div {
-            background-color: #384B70; /* لون خلفية الكتب */
+
+        .bookcontainer {
+            background-color: #f0f0f0;
+            padding: 15px;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+            
+
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 20px;
             text-align: center;
-            width: 250px;
-            transition: transform 0.3s ease;
+            color: #B8001F;
         }
-    
-        .book-container div:hover {
-            transform: scale(1.05);
+
+        .description {
+            font-size: 15px;
+            color: #507687;
+
         }
-    
-        .book-container img {
-            width: 100%;
-            border-radius: 8px;
-        }
-    
-        .book-container p {
-            margin-top: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #F0CFAE; /* اللون الكريمي للنص */
-        }
-    
-        /* استايل العناوين */
-        .book1, .book2, .book3 {
-            color: #EB8001; /* لون النص */
-        }
-    
-        /* استايل زر "add to cart" */
-        .add-to-cart {
-            background-color: #F0CFAE; /* لون الزر */
-            color: #384B70; /* لون النص في الزر */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin-top: 10px;
-        }
-    
-        .add-to-cart:hover {
-            background-color: #507687; /* تغيير اللون عند المرور */
-        }
-    
-        /* استايل السعر */
+
         .price {
-            margin-top: 10px;
-            font-size: 16px;
+            text-align: end;
+            color: #B8001F;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .num {
+            background-color: #FCFAEE;
             color: #384B70;
         }
+
+        .buy {
+            font-size: 16px;
+            background-color: #384B70;
+            color: #FCFAEE;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 30px;
+            width: 100px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 15px;
+
+
+        }
+
+        .buy:hover {
+
+            background-color: #FCFAEE;
+            color: #384B70;
+            transform: scale(1.05);
+
+        }
     </style>
-    
+
 </head>
+
 <body>
+    <div class="bookcontainer" id="frontend-book">
+        <img src="photo_2025-05-09_00-17-13.jpg" alt="frontend book">
+        <p class="title">FrontEnd Book</p>
+        <p class="description">A quick guide to learning website interface design<br> using HTML, CSS, and JavaScript.
+        </p>
+        <p class="price">price:<span>499.99</span> LE</p>
+        <form >
+            <input type="number" max="100" min="1" class="num">
+            <input type="submit" class="buy" value="Add to cart">
+            
 
-    <div class="book-container">
-        <div class="frontbook">
-            <img class="img1" src="C:/Users/user/OneDrive/Pictures/Saved Pictures/fbook.jpg" alt="Frontend Book"/>
-            <p class="book1">Frontend Book</p>
-            <p class="price">500 LE</p>
-            <button class="add-to-cart">add to cart</button>
-        </div>
+        </form>
+    </div>
+    </div>
+    <div class="bookcontainer" id="backend-book">
+        <img src="photo_2025-05-09_00-17-24.jpg" alt="Backend book">
+        <p class="title">BackEnd Book</p>
+        <p class="description">A beginner-friendly guide to building server-side<br> apps, connecting databases,
+            and creating secure<br> APIs using backend tools like Node.js or Python.</p>
+        <p class="price">price:<span>499.99</span> LE</p>
+        <form >
+            <input   type="number" max="100" min="1" class="num">
+            <input type="submit" class="buy" value="Add to cart">
+            
 
-        <div class="backbook">
-            <img class="img2" src="C:/Users/user/OneDrive/Pictures/Saved Pictures/bbook.jpg" alt="Backend Book"/>
-            <p class="book2">Backend Book</p>
-            <p class="price">500LE</p>
-            <button class="add-to-cart">add to cart</button>
-        </div>
+        </form>
+    </div>
+    </div>
+    <div class="bookcontainer" id="basics-book">
+        <img src="photo_2025-05-09_00-17-31.jpg" alt="programming basics book">
+        <p class="title">Programming Basics Book</p>
+        <p class="description">An easy-to-follow guide for beginners to learn<br> the fundamentals of programming,
+            including<br> variables, loops, conditionals, and basic<br> problem-solving using simple code examples.
 
-        <div class="pbbook">
-            <img class="img3" src="C:/Users/user/OneDrive/Pictures/Saved Pictures/pbbook.jpg" alt="Programming Basics Book"/>
-            <p class="book3">Programming Basics Book</p>
-            <p class="price">500LE</p>
-            <button class="add-to-cart">add to cart</button>
-        </div>
+        </p>
+        <p class="price">price:<span>499.99</span> LE</p>
+        <form>
+            <input type="number" max="100" min="1" class="num">
+            <input type="submit" class="buy" value="Add to cart">
+            
+
+        </form>
+    </div>
     </div>
 
-</body>
-</html>
+
+
+
+
+    <script>
+    // Frontend book
+    document.querySelector("#frontend-book .buy").onclick = function (event) {
+        event.preventDefault();
+
+        let container = document.getElementById("frontend-book");
+        let price = +container.querySelector("span").textContent;
+        let qty = +container.querySelector(".num").value;
+
+        if (qty <= 0 || isNaN(qty)) {
+            alert("Please enter a valid quantity (at least 1)");
+            return;
+        }
+
+        let total = price * qty;
+        let confirmbuy = confirm(`Are you sure you want to add ${qty} Books to the cart ? 
+Total price: ${total}`);
+
+        if (confirmbuy) {
+            alert("Added successfully");
+        }
+    };
+
+    // Backend book
+    document.querySelector("#backend-book .buy").onclick = function (event) {
+        event.preventDefault();
+
+        let container = document.getElementById("backend-book");
+        let price = +container.querySelector("span").textContent;
+        let qty = +container.querySelector(".num").value;
+
+        if (qty <= 0 || isNaN(qty)) {
+            alert("Please enter a valid quantity (at least 1)");
+            return;
+        }
+
+        let total = price * qty;
+        let confirmbuy = confirm(`Are you sure you want to add ${qty} Books to the cart ? 
+Total price: ${total}`);
+
+        if (confirmbuy) {
+            alert("Added successfully");
+        }
+    };
+
+    // Programming basics book
+    document.querySelector("#basics-book .buy").onclick = function (event) {
+        event.preventDefault();
+
+        let container = document.getElementById("basics-book");
+        let price = +container.querySelector("span").textContent;
+        let qty = +container.querySelector(".num").value;
+
+        if (qty <= 0 || isNaN(qty)) {
+            alert("Please enter a valid quantity (at least 1)");
+            return;
+        }
+
+        let total = price * qty;
+        let confirmbuy = confirm(`Are you sure you want to add ${qty} Books to the cart ? 
+Total price: ${total}`);
+
+        if (confirmbuy) {
+            alert("Added successfully");
+        }
+    };
+</script>
