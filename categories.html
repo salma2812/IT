@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: #B8001F; 
+    }
+
+    header {
+      color: #B8001F;      
+      position: fixed;
+      width: auto;
+      height: auto;     
+      z-index: 100;     
+      margin: 10px;     
+      left: 0%;
+      top: 0;
+    }    
+
+    header a {
+      padding: 6px 15px;      
+    }
+
+    body {
+      margin-top: 0px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #FCFAEE; 
+      color: #384B70; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .categories {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+      max-width: 800px;
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+
+    .category-card {
+      border-radius: 15px;
+      width: 100%;
+      padding: 40px 20px;
+      background-color: #507687; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      color: #FCFAEE; 
+      cursor: pointer;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .category-card:hover {
+      transform: scale(1.02);
+      background-color: #B8001F; 
+    }
+
+    .category-card h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+</style>
+
+</head>
+<body>
+
+  <header>
+    <h1><a href="C:\Users\user\OneDrive\Desktop\it project\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
+  </header>
+
+  <section class="categories">
+    <div class="category-card" onclick="navigateTo('https://www.youtube.com/playlist?list=PLcznNtaxxnsiqWjLH78GOk33n-DyTeWv5')">
+      <h2>Front-End</h2>
+      <p>Learn how to build stunning user interfaces and make your websites come alive.</p>
+    </div>
+    <div class="category-card" onclick="navigateTo('https://www.youtube.com/playlist?list=PLcznNtaxxnsjcF3hqVIEt7iXqaE7drHku')">
+      <h2>Back-End</h2>
+      <p>Master server-side development and manage databases efficiently.</p>
+    </div>
+    <div class="category-card" onclick="navigateTo('https://www.youtube.com/playlist?list=PLcznNtaxxnsh6L5NcqlAnXuqHm4Ag8F-l')"">
+      <h2>Programming Basics</h2>
+      <p>Start your journey by learning essential programming concepts and logic.</p>
+    </div>
+  </section>
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>

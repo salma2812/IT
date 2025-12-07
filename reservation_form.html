@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reservation - Academy Style</title>
+    
+    <script>
+        function simulateBooking(event) {
+            event.preventDefault(); 
+            
+            const phoneNumber = document.getElementById('phone').value;
+
+            const centerName = document.getElementById('center').options[document.getElementById('center').selectedIndex].text;
+            const messageArea = document.getElementById('message-area');
+
+            const bookingCode = Math.floor(100000 + Math.random() * 900000); 
+
+            const form = document.getElementById('booking-form');
+            form.style.display = 'none';
+
+            messageArea.innerHTML = `
+                <h2>✅ Book Reserved Successfully!</h2>
+                <p><strong>Selected Center:</strong> ${centerName}</p>
+                <p>A unique pickup code has been sent via SMS to the number <strong>${phoneNumber}</strong>.</p>
+                <div class="code-box">
+                    <p>Your Pickup Code:</p>
+                    <strong>${bookingCode}</strong>
+                </div>
+                <p class="pickup-note">Please present this code when collecting the book at the selected center.</p>
+                <button type="button" class="back-button" onclick="window.location.reload();">Reserve Another Book</button>
+            `;
+            messageArea.style.display = 'block';
+        }
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+    <style>
+        :root {
+            --dark-blue: #364052; 
+            --light-cream: #fbf9f4; 
+            --form-background: #ffffff; 
+            --maroon-red: #9e1f3a; 
+            --soft-border: #ddd;
+        }
+
+
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--dark-blue); direction: ltr; }
+        .split-layout { display: flex; min-height: 100vh; }
+        
+
+        .sidebar {
+            width: 25%; 
+            background-color: var(--dark-blue);
+            padding: 30px;
+            color: white;
+        }
+        .logo { font-size: 30px; font-weight: bold; margin: 0; color: #ffffff; }
+        .tagline { font-size: 16px; margin-top: 5px; color: #ccc; }
+
+
+        .main-content {
+            flex-grow: 1; 
+            background-color: var(--light-cream);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+
+        .booking-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--form-background);
+            padding: 40px;
+            border-radius: 15px; 
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); 
+            text-align: left;
+        }
+
+ 
+        .welcome-title {
+            font-family: Georgia, serif; 
+            font-size: 38px;
+            font-weight: bold;
+            color: var(--maroon-red);
+            line-height: 1.2;
+            margin-bottom: 30px; 
+            text-align: center;
+        }
+
+ 
+        .input-group {
+            margin-bottom: 25px; 
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid var(--soft-border);
+            border-radius: 20px; 
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #666;
+            transition: border-color 0.3s;
+            
+            caret-color: var(--maroon-red); 
+            
+            -webkit-appearance: none; 
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%20120.3L146.2%20261.1%205.4%20120.3z%22%2F%3E%3C%2Fsvg%3E'); 
+            background-repeat: no-repeat;
+            background-position: right 15px center; 
+            padding-right: 40px;
+            padding-left: 15px;
+        }
+
+ 
+        .input-group input::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+        
+ 
+        .input-group input:focus, .input-group select:focus {
+            outline: none; 
+            border-color: var(--maroon-red); 
+            box-shadow: 0 0 5px rgba(158, 31, 58, 0.5); 
+        }
+        
+ 
+        .info-text {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: 25px;
+            padding: 10px;
+            border-bottom: 1px solid var(--soft-border);
+            border-top: 1px solid var(--soft-border);
+        }
+
+ 
+        .reserve-button {
+            width: 100%; 
+            padding: 12px;
+            background-color: var(--maroon-red);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+
+        .reserve-button:hover {
+            background-color: #7b192e;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .success-message h2 {
+            color: var(--maroon-red);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .code-box {
+            background-color: var(--light-cream);
+            border: 2px solid var(--maroon-red);
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 250px;
+            font-size: 28px;
+            color: var(--dark-blue);
+        }
+        
+        .code-box strong {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .pickup-note {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            background-color: var(--dark-blue);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>  
+
+        <div class="main-content">
+            <div class="booking-container">
+                <h1 class="welcome-title">
+                    Reserve Your Book
+                </h1>
+                
+                <form id="booking-form" onsubmit="return simulateBooking(event)">
+                    
+                    <div class="input-group">
+                        <label for="phone">Phone Number (For Code)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="center">Select Pickup Center</label>
+                        <select id="center" name="center" required>
+                            <option value="" disabled selected>-- Choose a Center --</option>
+                            
+                            <optgroup label="Masr El-Gedida Area (مصر الجديدة)">
+                                <option value="masr_future">سنتر فيوتشر مصر الجديدة</option>
+                                <option value="masr_tabarak_montazah">سنتر تبارك المنتزة</option>
+                                <option value="masr_tabarak_hegaz">سنتر تبارك الحجاز</option>
+                            </optgroup>
+                            
+                            <optgroup label="Sheraton Area (شيراتون)">
+                                <option value="sheraton_task">سنتر تاسك</option>
+                            </optgroup>
+                            
+                            <optgroup label="Nasr City Centers (مدينة نصر)">
+                                <option value="nasr_oxford_abbas">اكسفورد عباس</option>
+                                <option value="nasr_harvard">سنتر هارفارد</option>
+                                <option value="nasr_oxford_city">سنتر اكسفورد سيتي</option>
+                                <option value="nasr_oxford_serag">سنتر اكسفورد السراج</option>
+                            </optgroup>
+                            
+                            <optgroup label="Tagamo3 Centers (التجمع)">
+                                <option value="tagamo3_top_academy">Center Top Acadmey</option>
+                                <option value="tagamo3_marathon">سنتر مارثون</option>
+                            </optgroup>
+                            
+                            <optgroup label="Rehab Centers (الرحاب)">
+                                <option value="rehab_cairo">Cairo Center El Rehab</option>
+                                <option value="rehab_60">سنتر 60 الرحاب</option>
+                            </optgroup>
+
+                            <optgroup label="Madinaty Area (مدينتي)">
+                                <option value="madinaty_cairo">كايرو سنتر مدينتي</option>
+                            </optgroup>
+                            
+                            <optgroup label="El Shorouk Area (الشروق)">
+                                <option value="shorouk_power">الشروق power سنتر</option>
+                                <option value="shorouk_ght">سنتر GHT الشروق</option>
+                            </optgroup>
+                            
+                            <optgroup label="El Mostaqbal City (مدينة المستقبل)">
+                                <option value="mostaqbal_soqrit">سنتر Soqrit academy</option>
+                            </optgroup>
+                            
+                            <optgroup label="Other Areas (مناطق أخرى)">
+                                <option value="other_high_level">سنتر هاي ليفل (السواح)</option>
+                                <option value="other_masarra">سنتر المسره</option>
+                                <option value="other_sanjoseph">سنتر سان جوزيف الزيتون</option>
+                                <option value="other_ecl">ECL center</option>
+                                <option value="other_universe">سنتر يونيفرس</option>
+                                <option value="other_toman_bay">سنتر طومان باي التعليمي</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+                    
+                    <p class="info-text">
+                        A unique pickup code will be sent to your phone to collect the book from the selected center.
+                    </p>
+
+                    <button type="submit" class="reserve-button">Reserve & Get Code</button>
+                </form>
+                
+                <div id="message-area" class="success-message" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

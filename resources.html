@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Resources</title>
+</head>
+<body>
+ <header>
+ <h1 class="logo"><a href="C:\Users\user\OneDrive\Desktop\it project\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1> 
+ </header>
+ 
+ <h1 class="resources">RESOURCES</h1>
+ 
+ <div class="resources-container">
+ <a href="https://www.hackerrank.com/" target="_blank">
+ <img src="C:\Users\user\Downloads\hrank.jpg" alt="HackerRank">
+ </a>
+ <a href="https://www.w3schools.com/" target="_blank">
+ <img src="C:\Users\user\Downloads\w3.jpg" alt="W3Schools">
+ </a>
+ <a href="https://leetcode.com/" target="_blank">
+ <img src="C:\Users\user\Downloads\leetcode.jpg" alt="LeetCode">
+ </a>
+ <a href="https://wtf.tw/ref/duckett.pdf" target="_blank">
+ <img src="C:\Users\user\Downloads\htmlandcss.jpg" alt="BOOK">
+ </a>
+ <a href="C:\Users\user\Downloads\prob.jpg" target="_blank">
+ <img src="C:\Users\user\Downloads\pforbeg.jpg" alt="BOOK">
+ </a>
+ <a href="C:\Users\user\Downloads\selftp.jpg" target="_blank">
+ <img src="C:\Users\user\Downloads\selftp.jpg" alt="BOOK">
+ </a>
+ <a href="https://eloquentjavascript.net/" target="_blank">
+ <img src="C:\Users\user\Downloads\eloq.jpg" alt="BOOK">
+ </a>
+ <a href="https://greenteapress.com/wp/think-python-2e/" target="_blank">
+ <img src= "C:\Users\user\Downloads\prob.jpg"alt="BOOK">
+ </a>
+ <a href="https://www.codecademy.com/" target="_blank">
+ <img src="C:\Users\user\Downloads\codeacademy.jpg" alt="codecademy">
+ </a>
+ </div>
+ <style>
+  a{text-decoration: none;}
+ body {
+ position: relative;
+ margin: 0;
+ height: 100vh;
+ }
+
+ body::before {
+ content: "";
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-image: url("C:/Users/user/Downloads/bg.jpg");
+ background-size: cover;
+ background-position: center center;
+ opacity: 0.8;
+ z-index: -1;
+ }
+
+.logo{
+ color: #ffffff;
+ padding: 5px;
+}
+ .resources {
+ font-size: xx-large;
+ color: #ffffff;
+ padding: 20px;
+ border-radius: 10px;
+ text-align: center;
+ }
+ .resources-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 20px;
+ padding: 20px;
+ }
+ 
+ .resources-container a img {
+ width: 200px;
+ height: 200px;
+ border-radius: 10px;
+ }
+ </style>
+
+<script>
+ let images = document.querySelectorAll(".resources-container img");
+
+ images.forEach(img => {
+ img.addEventListener("mouseover", () => {
+ img.style.transform = "scale(1.1)";
+ });
+
+ img.addEventListener("mouseout", () => {
+ img.style.transform = "scale(1)";
+ });
+ });
+</script>
+
+
+</body>
+</html>

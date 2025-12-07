@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Book Store</title>
+    <style>
+        a {
+  color: #B8001F; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: #507687; }
+        body {
+            display: flex;
+            justify-content: space-evenly;
+            /* margin-top: 100px; */
+
+        }
+        button{
+            margin-left: 95px;
+            font-size: 16px;
+            background-color: #384B70;
+            color: #FCFAEE;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 30px;
+            width: 100px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 15px;
+        }
+
+        img {
+            height: 300px;
+            width: auto;
+
+
+        }
+
+        .bookcontainer {
+             margin-top: 100px;
+             margin-left: auto;
+             margin-right: auto;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            width: fit-content;
+            
+
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            color: #B8001F;
+        }
+
+        .description {
+            font-size: 15px;
+            color: #507687;
+
+        }
+
+        .price {
+            text-align: end;
+            color: #B8001F;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+    <h1><a href="C:\Users\user\OneDrive\Desktop\it project\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
+  </header>
+    <div class="bookcontainer" id="frontend-book">
+        <img src="C:\Users\user\Downloads\front-removebg-preview.png" alt="frontend book">
+        <p class="title">FrontEnd Book</p>
+        <p class="description">A quick guide to learning website interface design<br> using HTML, CSS, and JavaScript.
+        </p>
+        <p class="price">price:<span>499.99</span> LE</p>
+        <button onclick="navigateTo('C:/Users/user/OneDrive/Desktop/it project/html/project1/ITproject/store/reservation_form.html')" class="reserve-button">Reserve</button>
+    </div>
+    </div>
+    <div class="bookcontainer" id="backend-book">
+        <img src="C:\Users\user\Downloads\back-removebg-preview.png" alt="Backend book">
+        <p class="title">BackEnd Book</p>
+        <p class="description">A beginner-friendly guide to building server-side<br> apps, connecting databases,
+            and creating secure<br> APIs using backend tools like Node.js or Python.</p>
+        <p class="price">price:<span>499.99</span> LE</p>
+       <button onclick="navigateTo('C:/Users/user/OneDrive/Desktop/it project/html/project1/ITproject/store/reservation_form.html')" class="reserve-button">Reserve</button>
+    </div>
+    </div>
+    <div class="bookcontainer" id="basics-book">
+        <img src="C:\Users\user\Downloads\basics-removebg-preview.png" alt="programming basics book">
+        <p class="title">Programming Basics Book</p>
+        <p class="description">An easy-to-follow guide for beginners to learn<br> the fundamentals of programming,
+            including<br> variables, loops, conditionals, and basic<br> problem-solving using simple code examples.
+
+        </p>
+        <p class="price">price:<span>499.99</span> LE</p>
+        <button onclick="navigateTo('C:/Users/user/OneDrive/Desktop/it project/html/project1/ITproject/store/reservation_form.html')" class="reserve-button">Reserve</button>
+    </div>
+    </div>
+
+
+
+
+
+    <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }    
+    // Frontend book
+    document.querySelector("#frontend-book .buy").onclick = function (event) {
+        event.preventDefault();
+
+        let container = document.getElementById("frontend-book");
+        let price = +container.querySelector("span").textContent;
+        let qty = +container.querySelector(".num").value;
+
+        if (qty <= 0 || isNaN(qty)) {
+            alert("Please enter a valid quantity (at least 1)");
+            return;
+        }
+
+        let total = price * qty;
+        let confirmbuy = confirm(`Are you sure you want to add ${qty} Books to the cart ? 
+Total price: ${total}`);
+
+        if (confirmbuy) {
+            alert("Added successfully");
+        }
+    };
+
+    // Backend book
+    document.querySelector("#backend-book .buy").onclick = function (event) {
+        event.preventDefault();
+
+        let container = document.getElementById("backend-book");
+        let price = +container.querySelector("span").textContent;
+        let qty = +container.querySelector(".num").value;
+
+        if (qty <= 0 || isNaN(qty)) {
+            alert("Please enter a valid quantity (at least 1)");
+            return;
+        }
+
+        let total = price * qty;
+        let confirmbuy = confirm(`Are you sure you want to add ${qty} Books to the cart ? 
+Total price: ${total}`);
+
+        if (confirmbuy) {
+            alert("Added successfully");
+        }
+    };
+
+    // Programming basics book
+    document.querySelector("#basics-book .buy").onclick = function (event) {
+        event.preventDefault();
+
+        let container = document.getElementById("basics-book");
+        let price = +container.querySelector("span").textContent;
+        let qty = +container.querySelector(".num").value;
+
+        if (qty <= 0 || isNaN(qty)) {
+            alert("Please enter a valid quantity (at least 1)");
+            return;
+        }
+
+        let total = price * qty;
+        let confirmbuy = confirm(`Are you sure you want to add ${qty} Books to the cart ? 
+Total price: ${total}`);
+
+        if (confirmbuy) {
+            alert("Added successfully");
+        }
+    };
+</script>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <style>
+   a {
+  text-decoration: none;
+  color: #fff;  
+  padding: 6px 15px;  
+}
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #023e8a;
+      color: #333;
+    }
+
+    header {
+    color: black;
+    text-align: center;
+    position: fixed;
+    width: 60PX;
+    height:40PX ;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    /* background-color:white ;   */
+    left: 10;  
+    top: 10;
+   }
+   header.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    
+   }  
+
+   header a {
+    padding: 6px 15px;
+    border-radius:20px ;
+   }
+
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      gap: 60px;
+    }
+
+    .about-img img {
+      width: 350px;
+      border-radius: 8px;
+      margin-left: 200PX;
+    }
+
+    .about-text h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 20px;
+      margin-left:80PX;
+    }
+
+    .about-text p {
+      max-width: 500px;
+      font-size: 16px;
+      margin-left: 80PX;
+      line-height: 1.6;
+      color: white;
+    }
+
+    .facbook-icon{
+      text-decoration: none;
+      padding-left: 400PX;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong><a href="C:\Users\user\OneDrive\Desktop\it project\html\project1\ITproject\home\home.html">CSA</a></strong></div>
+  </header>
+
+  <section class="about-section">
+    <div class="about-img">
+      <img src="C:\Users\user\Downloads\aboutus.jpg" alt="Designer">
+    </div>
+    <div class="about-text">
+      <h1>ABOUT US</h1>
+      <p>Our platform is dedicated to delivering high-quality education by combining flexibility, affordability, and accessibility. We provide free online lessons to support students wherever they are, ensuring they can learn at their own pace and convenience. For those who prefer in-person guidance, we offer structured sessions at our educational center for a fixed and reasonable fee. <br></br>
+        In addition to these services, we also sell curriculum-aligned textbooks that complement our lessons and help students deepen their understanding of each subject. Our goal is to create a supportive learning environment that empowers students with the tools and resources they need to succeed academically.</p>
+    
+    </div>
+  </section>
+  <a href="https://www.facebook.com/profile.php?id=61575088424020" target="_blank">
+    <img class="facbook-icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width:32px; height:32px;">
+  </a>
+  <script>
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const scrollPos = window.scrollY || document.documentElement.scrollTop;
+  
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 100;
+        const bottom = top + sec.offsetHeight;
+        const id = sec.getAttribute('id');
+        const navLink = document.querySelector(`nav a[href="#${id}"]`);
+        if (scrollPos >= top && scrollPos <= bottom && navLink) {
+          document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+          navLink.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

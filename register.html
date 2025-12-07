@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page - Academy Style</title>
+    
+    <script>
+        function navigateTo(url) {
+            window.location.href = url; 
+        }
+    </script>
+
+    <style>
+        :root {
+            --dark-blue: #364052; 
+            --light-cream: #fbf9f4;
+            --form-background: #ffffff;
+            --maroon-red: #9e1f3a;
+            --soft-border: #ddd;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--dark-blue); 
+        }
+
+
+        .split-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+
+        .sidebar {
+            width: 25%; 
+            background-color: var(--dark-blue);
+            padding: 30px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .tagline {
+            font-size: 16px;
+            margin-top: 5px;
+            color: #ccc;
+        }
+
+
+        .main-content {
+            flex-grow: 1; 
+            background-color: var(--light-cream);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+
+        .register-container {
+            width: 100%;
+            max-width: 450px;
+            background-color: var(--form-background);
+            padding: 40px;
+            border-radius: 15px; /* زوايا ناعمة */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); 
+        }
+
+
+        .welcome-title {
+            font-family: Georgia, serif; 
+            font-size: 38px;
+            font-weight: bold;
+            color: var(--maroon-red);
+            line-height: 1.2;
+            margin-bottom: 30px; 
+            text-align: center;
+            font-style: italic; 
+        }
+
+
+        .register-form {
+            text-align: left;
+        }
+
+        .input-group {
+            margin-bottom: 20px; 
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid var(--soft-border);
+            border-radius: 20px; /* زوايا دائرية قوية */
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .input-group input::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+
+
+        .register-button {
+
+            width: 100%; 
+            padding: 12px;
+            background-color: var(--maroon-red);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+
+        .register-button:hover {
+            background-color: #7b192e;
+        }
+
+        .login-link {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .login-link a {
+            color: var(--maroon-red);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+        <div class="main-content">
+            <div class="register-container">
+                <h1 class="welcome-title">
+                    Join <br> our academy
+                </h1>
+                
+                <form action="dashboard.html" method="POST" class="register-form">
+                    
+                    <div class="input-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="please enter your full name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="please enter your email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="please choose a strong password" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="re-enter your password" required>
+                    </div>
+                    
+                    <button type="submit" class="register-button">Register</button>
+                </form>
+                
+                <p class="login-link">
+                    Already registered? <a href="#" onclick="navigateTo('C:/Users/user/OneDrive/Desktop/it project/html/project1/ITproject/login/login.html')">Login Here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
